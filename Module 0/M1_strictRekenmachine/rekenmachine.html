@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekenmachine</title>
+    <style>
+        form {
+            margin: auto;
+            border: black solid 2px;
+            padding: 10px;
+            width: fit-content;
+            
+        }
+        
+        form * {
+            display: block;
+            margin: auto;
+            text-align: center;
+            margin: 1em;
+        }
+    </style>
+  </head>
+  <body>
+    <form>
+        <label for="getal1">Getal1:</label>
+        <input type="text" id="getal1">
+        <span>+</span>
+        <label for="getal2">Getal2:</label>
+        <input type="text" id="getal2">
+        <button type="button" id="bereken">Bereken</button>
+        <p>Het resultaat komt hier: </p>
+        <p id="resultaat"></p>
+    </form>
+    <script type="module" src="som.js"></script>
+  </body>
+</html>
