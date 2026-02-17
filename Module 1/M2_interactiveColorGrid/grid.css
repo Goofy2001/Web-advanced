@@ -1,0 +1,14 @@
+#grid>div {
+    border: black solid 1px;
+    flex: 1 1 calc(20% - 1rem);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+#grid {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
