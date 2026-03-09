@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Social Media Formatter</h1>
+    <textarea id="inputText">Dit is een veel te lang bericht voor sociale media</textarea>
+    <button onclick="formatText()">Formateer</button>
+    <div class="output" id="tweetOutput">Tweet verschijnt hier...</div>
+    <div class="output" id="postOutput">Post verschijnt hier...</div>
+    <div class="output" id="comboOutput">Gecombineerd bericht verschijnt hier...</div>
+    <script>
+        const formatTweet = text => text.slice(0,280)
+        const formatPost = text => text.toUpperCase()
+        const formatCombo = (tweet, post) => `${tweet}---${post}`
+        const formatText = () => {
+            let message = document.getElementById('inputText').value
+            const tweet = formatTweet(message)
+            const post = formatPost(message)
+            const combo = formatCombo(tweet, post)
+            document.getElementById('tweetOutput').innerText = tweet
+            document.getElementById('postOutput').innerText = post
+            document.getElementById('comboOutput').innerText = combo
+        } 
+    </script>
+</body>
+
+</html>
